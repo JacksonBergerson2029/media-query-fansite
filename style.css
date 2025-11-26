@@ -18,12 +18,40 @@ color:black;
 }
 
 img {
-max-height: 100%;
+max-width: 100%;
+height: auto;
 }
 
 main img, main video {
-width: 25vw;
-height: 25vh;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+@media (max-width: 900px) {
+    #content { grid-template-columns: 1fr; grid-template-areas:
+        "h"
+        "n"
+        "m"
+        "f";
+    }
+    main { grid-template-columns: repeat(2, 1fr); }
+    header, nav, main, footer { margin: 8px; padding: 12px; }
+}
+
+@media (max-width: 800px) {
+    #content { grid-template-columns: 1fr; grid-template-areas:
+        "h"
+        "n"
+        "m"
+        "f";
+    }
+    main { grid-template-columns: 1fr; }
+    header, nav, main, footer { margin: 4px; padding: 8px; }
+
+    main img, main video { aspect-ratio: 16/9; min-height: 160px; }
 }
 
 nav ul {
@@ -73,11 +101,16 @@ nav {
 main {
     padding: 20px;
     grid-area: m;
+    /* Create a grid for the images inside main so they remain in 3 columns */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: start;
 }
 
 footer {
     grid-area: f;
-    color:#c91c1c;
+    color: black;
 }
 
 .button {
@@ -103,8 +136,7 @@ body.dark-mode .title {
 
 /* Dark Mode */
 
-main p {color: #c91c1c; font-size: 20px;
-}
+main p {color: #c91c1c; font-size: 20px; grid-column: 1 / -1; text-align: center;}
 
 #content {
     display: grid;
