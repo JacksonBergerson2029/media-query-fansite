@@ -5,3 +5,6 @@ function toggleDark() {
     document.body.classList.toggle("dark-mode");
 }
 /* Dark Mode */
+
+const video = document.querySelector(".video");
+video.volume = 0.25;

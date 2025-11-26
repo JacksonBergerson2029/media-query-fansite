@@ -22,12 +22,15 @@ max-width: 100%;
 height: auto;
 }
 
-main img, main video {
+.dexterCollage {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
     aspect-ratio: 16/9;
+}
+
+.dexterCollage2 {
 }
 
 @media (max-width: 900px) {
@@ -60,15 +63,6 @@ margin-left: 0;
 padding-left: 0;
 }
 
-table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 10px;
-}
-
-table, th, td {
-border: 1px solid #cccccc;
-}
 
 th, td {
 padding: 10px;
@@ -122,6 +116,10 @@ button {
   background-color: #c91c1c; border: none; color: white;
     padding: 0.5vw 1vh ; text-align: center; text-decoration: none;
     display: inline-block; font-size: 20px; margin: 0.5vh; cursor: pointer; 
+}
+
+button:hover {
+    text-decoration: underline;
 }
 
 /* Dark Mode */
