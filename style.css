@@ -20,8 +20,9 @@ img {
 max-height: 100%;
 }
 
-main img {
-width: 200px;
+main img, main video {
+width: 25vw;
+height: 25vh;
 }
 
 nav ul {
