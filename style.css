@@ -1,6 +1,6 @@
 body {
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-background: #fafafa;
+background: #c91c1c;
 margin: 0;
 padding: 0;
 }
@@ -10,10 +10,11 @@ padding: 20px;
 margin: 10px;
 background: #ffffff;
 border: 1px solid #dddddd;
+transition: background-color 2s, color 2s;
 }
 
 h1, h2 {
-color: #333333;
+color:black;
 }
 
 img {
@@ -59,16 +60,50 @@ header {
     grid-area: h;
 }
 
+header p {
+    font-size: 20px;
+    color:#c91c1c;
+    
+}
+
 nav {
     grid-area: n;
 }
 
 main {
+    padding: 20px;
     grid-area: m;
 }
 
 footer {
     grid-area: f;
+    color:#c91c1c;
+}
+
+.button {
+    background-color: #c91c1c; border: none; color: white;
+    padding: 0.5vw 1vh ; text-align: center; text-decoration: none;
+    display: inline-block; font-size: 20px; margin: 0.5vh; cursor: pointer; }
+
+button {
+  background-color: #c91c1c; border: none; color: white;
+    padding: 0.5vw 1vh ; text-align: center; text-decoration: none;
+    display: inline-block; font-size: 20px; margin: 0.5vh; cursor: pointer; 
+}
+
+/* Dark Mode */
+body.dark-mode header, body.dark-mode footer, body.dark-mode nav, body.dark-mode main {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .title {
+  color: white;
+}
+
+/* Dark Mode */
+
+main p {color: #c91c1c; font-size: 20px;
 }
 
 #content {
