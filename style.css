@@ -85,7 +85,6 @@ nav {
 #content main {
     padding: 20px;
     grid-area: m;
-    /* Create a grid for the images inside #content main so they remain in 3 columns */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -179,11 +178,43 @@ main p {color: #c91c1c; font-size: 20px; grid-column: 1 / -1; text-align: center
         "f f";
 }
 
+
 #content3 {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
-        "h h n"
-        "m m m"
-        "f f f";
+        "h h"
+        "n m"
+        "f f";
+}
+
+
+#content3 main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+    align-items: start;
+    padding: 0 8px;
+}
+
+#content3 main img {
+    width: 90%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    #content3 main { grid-template-columns: repeat(2, 1fr); }
+    #content3 main img { width: 95%; max-width: 640px; }
+}
+
+@media (max-width: 600px) {
+    #content3 { grid-template-columns: 1fr; grid-template-areas: "h" "n" "m" "f"; }
+    #content3 main { grid-template-columns: 1fr; gap: 12px; padding: 0 12px; }
+    #content3 main img { width: 100%; max-width: 100%; }
 }
